@@ -18,17 +18,13 @@ const PORT = process.env.PORT || 3003;
 //Database
 //___________________
 // How to connect to the database either via heroku or locally
-const PROJECT3_DB = process.env.PROJECT3_DB;
+const MONGODB_URI  = process.env.MONGODB_URI;
 
 // Connect to Mongo &
 // Fix Depreciation Warnings from Mongoose
 // May or may not need these depending on your Mongoose version
-// mongoose.connect(PROJECT3_DB , { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
+// mongoose.connect(MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
 // );
-mongoose.connect ('mongodb://localhost:27017/recipes')
-mongoose.connection.once('open', () => {
-  console.log('connected to mongod...');
-});
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -52,6 +48,9 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 app.use(cors())
 
+mongoose.connection.once('open', () => {
+  console.log('connected to mongod...');
+});
 //___________________
 // Routes
 //___________________
