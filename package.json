@@ -7,7 +7,7 @@
   "description": "SEI Project 3, March 2022",
   "main": "server.js",
   "scripts": {
-    "build": "webpack-cli",
+    "build": "echo 'build script executed'",
     "start": "node server.js"
   },
   "repository": {
