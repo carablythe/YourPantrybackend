@@ -1,28 +1,26 @@
 {
-  "name": "project3backend",
+  "name": "yourpantrybackend",
   "version": "1.0.0",
   "engines": {
-    "node": "16.13.1"
+    "node": "^16.13.1"
   },
   "description": "SEI Project 3, March 2022",
   "main": "server.js",
   "scripts": {
-    "watch": "webpack --watch",
-    "build": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack-cli",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carablythe/Project3backend.git"
+    "url": "git+https://github.com/carablythe/YourPantrybackend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/carablythe/Project3backend/issues"
+    "url": "https://github.com/carablythe/YourPantrybackend/issues"
   },
-  "homepage": "https://github.com/carablythe/Project3backend#readme",
+  "homepage": "https://github.com/carablythe/YourPantrybackend#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
