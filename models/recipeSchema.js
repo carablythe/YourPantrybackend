@@ -1,6 +1,4 @@
 const mongoose = require ('mongoose');
-require('dotenv').config();
-mongoose.connect(process.env.MONGO_URI);
 
 const recipeSchema = new mongoose.Schema({
   dish: {type: String, required:true},
@@ -10,7 +8,4 @@ const recipeSchema = new mongoose.Schema({
   picture: String,
 })
 
-const Recipe = mongoose.model ('Recipes', recipeSchema);
-
-
-module.exports = Recipe;
+module.exports = mongoose.model ('Recipes', recipeSchema);
